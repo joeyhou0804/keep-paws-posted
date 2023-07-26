@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/food.css">
+<link rel="stylesheet" type="text/css" href="/css/navbar.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="../js/profile.js"></script>
+<script src="../js/navbar.js"></script>
+
+<!-- <script src="main.js"></script> -->
+</head>
+
+<body>
+    <nav class="navbar-custom fixed-top pt-2 pb-2">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+            <img src="/images/paw_logo.png" width="30" height="30" class="d-inline-block align-text-top">
+            <span class="navbar-title">Keep Paws Posted</span>
+          </a>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row mt-4 mb-2 title">
+            <div class="col-12">
+                Profile
+            </div>
+        </div>
+        <div class="container-fluid rounded section-background pt-2 pb-2">
+            <div class="row">
+                <div class="col justify-content-center">
+                    <img src="/images/pet_picture_1.png" height="200" class="d-inline-block align-text-top rounded">
+                </div>
+                <div class="col my-auto">
+                    <div class="title">Barney</div>
+                    <br>
+                    <div class="text-black mb-2">Shih Tzu</div>
+                    <div class="text-black mb-2">Female</div>
+                    <div class="text-black mb-2">2 years old</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4 mb-2 title">
+            <div class="col-12">
+                About Me
+            </div>
+        </div>
+        <div class="container rounded pt-2 pb-2" style="border:2px solid #D9D9D9">
+            <div class="horizontal-space mt-2 mb-2"> <div class="subtitle" style="margin: 0">General Info</div> <div class="edit-button rounded text-center" id="info-edit">Edit</div></div>
+            <div id="nutrition-overview">
+                <div class="row mt-3">
+                    <div class="col-6 text-black-bold">
+                        Birthday
+                    </div>
+                    <div class="col-6 text-black" id="info-1">
+                        Jan. 1, 2020
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6 text-black-bold">
+                        Weight
+                    </div>
+                    <div class="col-6 text-black" id="info-2">
+                        10 lbs
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6 text-black-bold">
+                        Favorite Thing
+                    </div>
+                    <div class="col-6 text-black" id="info-3">
+                        Playing fetch
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6 text-black-bold">
+                        Best Friend
+                    </div>
+                    <div class="col-6 text-black" id="info-4">
+                        Lucy the dog
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6 text-black-bold">
+                        Adoption Date
+                    </div>
+                    <div class="col-6 text-gray" id="info-5">
+                        - No data -
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6 text-black-bold">
+                        Siblings
+                    </div>
+                    <div class="col-6 text-gray" id="info-6">
+                        - No data -
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6 text-black-bold">
+                        Favorite Food
+                    </div>
+                    <div class="col-6 text-gray" id="info-7">
+                        - No data -
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container rounded amount-change pt-2 pb-2" id="info-change">
+            <div class="col-12 subtitle">
+                Info Change
+            </div>
+            <div class="row align-items-center mt-3 mb-2">
+                <div class="col-9 justify-content-center">
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01">Item</label>
+                            <select class="form-select" id="inputGroupSelect01">
+                              <option selected>Choose...</option>
+                              <option value="1">Birthday</option>
+                              <option value="2">Weight</option>
+                              <option value="3">Favorite Thing</option>
+                              <option value="4">Best Friend</option>
+                              <option value="5">Adoption Date</option>
+                              <option value="6">Siblings</option>
+                              <option value="7">Favorite Food</option>
+                            </select>
+                          </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group">
+                            <span class="input-group-text">Info</span>
+                            <input type="text" id="info-change-val" class="form-control" aria-label="Amount">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 justify-content-center">
+                    <div class="row">
+                        <img src="../images/food_confirm.png" id="confirm-info">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container rounded are-you-sure pt-2 pb-2" id="are-you-sure-1">
+            <div class="col-12 subtitle">
+                Are you sure?
+            </div>
+            <div class="row align-items-center mt-3 mb-2">
+                <div class="col-6 justify-content-center are-you-sure-text">
+                    Do you want to delete the data of this item?
+                </div>
+                <div class="col-3 justify-content-center">
+                    <div class="row">
+                        <img src="../images/food_confirm.png" id="confirm-1">
+                    </div>
+                </div>
+                <div class="col-3 justify-content-center">
+                    <div class="row">
+                        <img src="../images/food_cancel.png" id="cancel-1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container rounded pt-2 pb-2" style="border:2px solid #D9D9D9">
+            <div class="horizontal-space mt-2 mb-2"> <div class="subtitle" style="margin: 0">Important Records</div> <div class="edit-button rounded text-center" id="record-edit">Edit</div></div>
+            <div id="nutrition-overview">
+                <div class="row mt-3">
+                    <div class="col-6 text-black-bold">
+                        Vet Phone
+                    </div>
+                    <div class="col-6 text-black" id="record-1">
+                        (123) 456-7890
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6 text-black-bold">
+                        Pet Insurance
+                    </div>
+                    <div class="col-6 text-black" id="record-2">
+                        XYZ Insurance
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6 text-black-bold">
+                        Medical Cond.
+                    </div>
+                    <div class="col-6 text-gray" id="record-3">
+                        - No data -
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6 text-black-bold">
+                        Dietary Notes
+                    </div>
+                    <div class="col-6 text-gray" id="record-4">
+                        - No data -
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6 text-black-bold">
+                        Special Needs
+                    </div>
+                    <div class="col-6 text-gray" id="record-5">
+                        - No data -
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container rounded amount-change pt-2 pb-2" id="record-change">
+            <div class="col-12 subtitle">
+                Record Change
+            </div>
+            <div class="row align-items-center mt-3 mb-2">
+                <div class="col-9 justify-content-center">
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect02">Item</label>
+                            <select class="form-select" id="inputGroupSelect02">
+                              <option selected>Choose...</option>
+                              <option value="1">Vet Phone</option>
+                              <option value="2">Pet Insurance</option>
+                              <option value="3">Medical Cond.</option>
+                              <option value="4">Dietary Notes</option>
+                              <option value="5">Special Needs</option>
+                            </select>
+                          </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group">
+                            <span class="input-group-text">Record</span>
+                            <input type="text" id="record-change-val" class="form-control" aria-label="Amount">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 justify-content-center">
+                    <div class="row">
+                        <img src="../images/food_confirm.png" id="confirm-record">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container rounded are-you-sure pt-2 pb-2" id="are-you-sure-2">
+            <div class="col-12 subtitle">
+                Are you sure?
+            </div>
+            <div class="row align-items-center mt-3 mb-2">
+                <div class="col-6 justify-content-center are-you-sure-text">
+                    Do you want to delete the data of this item?
+                </div>
+                <div class="col-3 justify-content-center">
+                    <div class="row">
+                        <img src="../images/food_confirm.png" id="confirm-2">
+                    </div>
+                </div>
+                <div class="col-3 justify-content-center">
+                    <div class="row">
+                        <img src="../images/food_cancel.png" id="cancel-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <nav class="navbar-custom fixed-bottom justify-content-center pt-2 pb-2">
+        <div class="container-fluid">
+            <div class="row justify-content-center mb-2">
+                <div class="col-3 justify-content-center" id="info-page">
+                    <div class="row">
+                        <img src="../images/info_page_selected.png" class="navbar-item img-responsive">
+                    </div>
+                    <div class="row justify-content-center navbar-title mt-1 border-white rounded selected-navbar-item">
+                        Profile
+                    </div>
+                </div>
+                <div class="col-3 justify-content-center" id="moments-page">
+                    <div class="row">
+                        <img src="../images/moments_page.png" class="navbar-item img-responsive">
+                    </div>
+                    <div class="row justify-content-center navbar-title mt-1">
+                        Moments
+                    </div>
+                </div>
+                <div class="col-3 justify-content-center" id="health-page">
+                    <div class="row">
+                        <img src="../images/health_page.png" class="navbar-item img-responsive">
+                    </div>
+                    <div class="row justify-content-center navbar-title mt-1">
+                        Health
+                    </div>
+                </div>
+                <div class="col-3 justify-content-center" id="food-page">
+                    <div class="row">
+                        <img src="../images/food_page.png" class="navbar-item img-responsive">
+                    </div>
+                    <div class="row justify-content-center navbar-title mt-1">
+                        Nutrition
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>
